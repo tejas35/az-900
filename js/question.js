@@ -24,5 +24,9 @@ const quiz = [
     options:['half','full','dont know'],
     answer:0
   },
-
+  {
+    q:'Is it finished',
+    options:['half','full','Almost'],
+    answer:0
+  },
 ]

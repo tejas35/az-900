@@ -17,7 +17,16 @@ body{
   margin: 40px auto;
   padding: 30px;
   border-radius: 10px;
-
+  animation: fadeInRight 1s ease;
+}
+@keyframes identifier {
+    0%{
+      transform: translateX(40px);
+      opacity:0;
+    }
+    100%{
+      transform: translateX(0px);
+    }
 }
 .custom-box::before,
 .custom-box::after{
@@ -78,6 +87,11 @@ body{
   text-transform: capitalize;
   opacity:0;
   animation: fadeIn 0.3s ease forwards;
+  position: relative;
+  overflow: hidden;
+}
+.quiz-box .question-container .option.already-answered{
+  pointer-events: none;
 }
 @keyframes fadeIn {
   0%{
@@ -87,20 +101,70 @@ body{
     opacity: 1;
   }
 }
+.quiz-box .question-container .option.correct::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: green;
+  z-index: -1;
+  animation: slideInLeft .5s ease forwards;
+}
+@keyframes slideInLeft {
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+.quiz-box .question-container .option.wrong::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  z-index: -1;
+  animation: slideInLeft .5s ease forwards;
+}
+.quiz-box .question-container .option.wrong{
+color: #ffffff;
+}
+.quiz-box .question-container .option.correct{
+color: #ffffff;
+
+}
 .quiz-box .btn{
   margin: 15px 0;
 }
 .quiz-box .answers-indicator{
-  border-top: 1px solid #cccccc
+  border-top: 1px solid #009688
 }
 .quiz-box .answers-indicator div{
   height: 40px;
   width: 40px;
   display: inline-block;
-  background-color: #000000;
+  background-color: #cccccc;
   border-radius: 50%;
 }
-
+.quiz-box .answers-indicator div.correct{
+  background-color: green;
+  background-image: url("../img/correct.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.quiz-box .answers-indicator div.wrong{
+  background-color: red;
+  background-image: url("../img/wrong.png");
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .result-box{
   text-align: center;
 }

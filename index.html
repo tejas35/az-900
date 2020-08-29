@@ -8,12 +8,12 @@
 </head>
 
 <body>
-	<div class="home-box custom-box hide">
+	<div class="home-box custom-box">
 		<h3>Instructions:</h3>
-		<p>Total Number of Questions:<span class="total-question">5</span></p>
-		<button type="button" class="btn">Start Quiz</button>
+		<p>Total Number of Questions:<span class="total-question"></span></p>
+		<button type="button" class="btn" onclick="startQuiz()">Start Quiz</button>
 	</div>
-	<div class="quiz-box custom-box">
+	<div class="quiz-box custom-box hide">
 
 		<div class="question-number">
 
@@ -37,31 +37,31 @@
 		<table>
 			<tr>
 				<td>Total Questions</td>
-				<td><span class="total-question">5</span></td>
+				<td><span class="total-question"></span></td>
 			</tr>
 			<tr>
 				<td>Attempts</td>
-				<td><span class="total-attempt">4</span></td>
+				<td><span class="total-attempt"></span></td>
 			</tr>
 			<tr>
 				<td>Correct</td>
-				<td><span class="total-correct">3</span></td>
+				<td><span class="total-correct"></span></td>
 			</tr>
 			<tr>
 				<td>Wrong</td>
-				<td><span class="total-wrong">5</span></td>
+				<td><span class="total-wrong"></span></td>
 			</tr>
 			<tr>
-				<td>percentage</td>
-				<td><span class="percentage">80%</span></td>
+				<td>Percentage</td>
+				<td><span class="percentage"></span></td>
 			</tr>
 			<tr>
 				<td>Total Score</td>
-				<td><span class="total-score">3/5</span></td>
+				<td><span class="total-score"></span></td>
 			</tr>
 		</table>
-		<button type="button" class="btn">Try Again</button>
-		<button type="button" class="btn">Go to home</button>
+		<button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
+		<button type="button" class="btn" onclick="goToHome()">Go to home</button>
 	</div>
 
 
